@@ -1,0 +1,15 @@
+function init() { 
+}
+function update(dt) { 
+} 
+function signal(name, value) { 
+if (value) {
+ let assetName = this.attribute('Asset Name'); 
+  let ent = this.entity(); 
+ if (ent == null) { 
+  error('Asset "' + assetName + '" does not exist'); 
+  } 
+  let pos = this.attribute('Teleport Position'); 
+  ent.setPosition(pos.x, pos.y, pos.z); 
+ } 
+}
